@@ -8,8 +8,7 @@
 ./gradlew jar
 ```
 
-This builds a jar in `build/libs/HD2BotLang.jar`, which can be run using `java -jar HD2BotLang.jar
-` (or `java -jar build/libs/HD2BotLang.jar`)
+This builds a jar in `build/libs/HD2BotLang.jar`, which can be run using `java -jar HD2BotLang.jar` (or `java -jar build/libs/HD2BotLang.jar`)
 
 ## Usage
 
@@ -42,3 +41,7 @@ Another line
 ```
 
 The output file, which is always `out.png`, will be created in the same directory as the terminal. There is **NO** check to see if the file already exists. It will be overwritten.
+
+## Reference
+
+![Language Reference](Automaton_Language_Conversion_Chart.png)
