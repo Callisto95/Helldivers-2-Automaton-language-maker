@@ -65,27 +65,27 @@ public class Main {
     ) {
         for (int x = 0; x < convertedLines.size(); x++) {
             final List<byte[][]> currentLine = convertedLines.get(x);
-            for (int subLetterY = 0; subLetterY < Alphabet.LETTER_SIZE; subLetterY++) {
-                drawLine(currentLine, x, subLetterY, image);
+            for (int y = 0; y < currentLine.size(); y++) {
+                drawLetter(x, y, currentLine.get(y), image);
             }
         }
     }
     
-    private static void drawLine(
-        final List<byte[][]> line,
+    private static void drawLetter(
         final int x,
-        final int subLetterY,
-        final BufferedImage image
+        final int y,
+        final byte[][] letter,
+        BufferedImage image
     ) {
-        for (int y = 0; y < line.size(); y++) {
-            for (int subLetterX = 0; subLetterX < Alphabet.LETTER_SIZE; subLetterX++) {
-                final int xOffset = x * 6 + 1 + subLetterX;
-                final int yOffset = y * 6 + 1 + subLetterY;
+        for (int subX = 0; subX < Alphabet.LETTER_SIZE; subX++) {
+            for (int subY = 0; subY < Alphabet.LETTER_SIZE; subY++) {
+                final int xPosition = x * (Alphabet.LETTER_SIZE + 1) + 1 + subX;
+                final int yPosition = y * (Alphabet.LETTER_SIZE + 1) + 1 + subY;
                 
                 image.setRGB(
-                    xOffset,
-                    yOffset,
-                    line.get(y)[subLetterY][subLetterX] == 1 ? PRIMARY_COLOUR : SECONDARY_COLOUR
+                    xPosition,
+                    yPosition,
+                    letter[subY][subX] == 1 ? PRIMARY_COLOUR : SECONDARY_COLOUR
                 );
             }
         }
