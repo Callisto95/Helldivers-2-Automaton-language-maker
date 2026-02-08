@@ -27,7 +27,7 @@ public class Alphabet {
     }
     
     // putting this down here for obvious reasons
-    private static final Map<Character, byte[][]> CHARACTER_MAP = Map.ofEntries(
+    private static final Map<Character, byte[][]> CHARACTER_MAP = Map.<Character, byte[][]>ofEntries(
         entry(
             'a', new byte[][] {
                 { 0, 1, 1, 1, 0 },
