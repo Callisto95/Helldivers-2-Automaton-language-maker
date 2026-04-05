@@ -23,7 +23,7 @@ public class Alphabet {
      * c. {@link Optional#empty()} if no representation could be found
      */
     public static Optional<byte[][]> of(final char c) {
-        return Optional.ofNullable(CHARACTER_MAP.getOrDefault(c, null));
+        return Optional.ofNullable(CHARACTER_MAP.get(c));
     }
     
     // putting this down here for obvious reasons

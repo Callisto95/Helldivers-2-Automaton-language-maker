@@ -40,6 +40,12 @@ Some Text
 Another line
 ```
 
+### Environment Variables
+
+- `VERTICAL`: if `1`, create vertical text
+- `SCALE`: how much the image should be scaled. `1` means a letter is 5x5 Pixel. Default: 10
+- `PRIMARY`, `SECONDARY`: the symbol and background colours respectively. Given in RGB hex format without leading `#` (so full red is `FF0000` instead of `#FF0000`)
+
 The output file, which is always `out.png`, will be created in the same directory as the terminal. There is **NO** check to see if the file already exists. It will be overwritten.
 
 ## Reference

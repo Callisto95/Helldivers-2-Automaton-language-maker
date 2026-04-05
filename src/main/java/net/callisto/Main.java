@@ -9,7 +9,6 @@ import java.util.*;
 import java.util.List;
 
 public class Main {
-    // this is a bad name
     private record DrawConfig(
         int primary,
         int secondary,
@@ -131,7 +130,7 @@ public class Main {
             .map(String::chars)
             .map(stream -> stream
                 .boxed()
-                .map(charValue -> Alphabet.of((char) (charValue & 0xFF)))
+                .map(charValue -> Alphabet.of((char) (charValue.intValue())))
                 .map(optional -> optional.orElseGet(() -> Alphabet.EMPTY))
                 .toList())
             .toList();
